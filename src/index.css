@@ -1,13 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --shadow-color: 216deg 59% 9%;
+  --shadow-elevation-low: -0.1px 0.1px 0.1px hsl(var(--shadow-color) / 0.4),
+    -0.1px 0.1px 0.1px -1.7px hsl(var(--shadow-color) / 0.34),
+    -0.3px 0.2px 0.4px -3.3px hsl(var(--shadow-color) / 0.27);
+  --shadow-elevation-medium: -0.1px 0.1px 0.1px hsl(var(--shadow-color) / 0.42),
+    -0.2px 0.2px 0.3px -1.1px hsl(var(--shadow-color) / 0.37),
+    -0.6px 0.4px 0.7px -2.2px hsl(var(--shadow-color) / 0.32),
+    -1.6px 1.2px 2px -3.3px hsl(var(--shadow-color) / 0.26);
+  --shadow-elevation-high: -0.1px 0.1px 0.1px hsl(var(--shadow-color) / 0.39),
+    -0.3px 0.2px 0.4px -0.5px hsl(var(--shadow-color) / 0.37),
+    -0.6px 0.5px 0.8px -1px hsl(var(--shadow-color) / 0.34),
+    -1.1px 0.8px 1.4px -1.4px hsl(var(--shadow-color) / 0.32),
+    -1.9px 1.4px 2.4px -1.9px hsl(var(--shadow-color) / 0.29),
+    -3.1px 2.3px 3.9px -2.4px hsl(var(--shadow-color) / 0.27),
+    -4.9px 3.6px 6.1px -2.9px hsl(var(--shadow-color) / 0.24),
+    -7.3px 5.5px 9.1px -3.3px hsl(var(--shadow-color) / 0.22);
+}
+
+#search {
+  box-shadow: var(--shadow-elevation-high);
+}
+
+.search-bar {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.search-bar.shown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
