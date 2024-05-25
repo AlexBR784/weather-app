@@ -13,7 +13,7 @@ const useWeather = () => {
     try {
       setWeather(null);
       const response = await axios.get(
-        `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_TOKEN}&q=${location}&days=1&aqi=yes&alerts=yes&lang=es`
+        `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_TOKEN}&q=${location}&days=1&aqi=yes&alerts=yes&lang=es`
       );
       setWeather(getWeatherData(response.data));
     } catch (err) {
