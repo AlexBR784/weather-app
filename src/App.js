@@ -1,5 +1,4 @@
 import WeatherCard from "./components/WeatherCard";
-import Noise from "./images/nnnoise.svg";
 function App() {
   return (
     <>
